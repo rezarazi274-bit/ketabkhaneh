@@ -1,0 +1,65 @@
+
+media:
+  - name: product-images
+    label: تصاویر محصولات
+    input: assets/images/products
+    output: /assets/images/products
+    extensions: [jpg, jpeg, png, webp]
+    categories: [image]
+
+  - name: branding-images
+    label: تصاویر هویت فروشگاه
+    input: assets/images/branding
+    output: /assets/images/branding
+    extensions: [jpg, jpeg, png, webp, svg]
+    categories: [image]
+
+content:
+  - name: store-settings
+    label: تنظیمات فروشگاه
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - { name: storeName, label: نام فروشگاه, type: string }
+      - { name: description, label: معرفی فروشگاه, type: text }
+      - { name: heroEyebrow, label: متن بالای عنوان, type: string }
+      - { name: heroTitle, label: عنوان صفحه اصلی, type: string }
+      - { name: heroDescription, label: توضیحات صفحه اصلی, type: text }
+      - name: logo
+        label: لوگو
+        type: image
+        options:
+          media: branding-images
+      - name: banner
+        label: بنر صفحه اصلی
+        type: image
+        options:
+          media: branding-images
+      - { name: telegramUsername, label: آیدی تلگرام, type: string }
+      - { name: currency, label: واحد پول, type: string }
+      - { name: backgroundColor, label: رنگ زمینه, type: string }
+      - { name: surfaceColor, label: رنگ کارت‌ها, type: string }
+      - { name: textColor, label: رنگ متن, type: string }
+      - { name: primaryColor, label: رنگ اصلی, type: string }
+      - { name: accentColor, label: رنگ مکمل, type: string }
+
+  - name: products
+    label: محصولات فروشگاه
+    type: file
+    path: data/products.json
+    format: json
+    list: true
+    fields:
+      - { name: id, label: شناسه, type: string }
+      - { name: name, label: نام محصول, type: string }
+      - { name: brand, label: برند, type: string }
+      - { name: category, label: دسته‌بندی, type: string }
+      - { name: price, label: قیمت, type: number }
+      - name: image
+        label: تصویر محصول
+        type: image
+        options:
+          media: product-images
+      - { name: description, label: توضیحات, type: text }
+      - { name: available, label: موجود است, type: boolean }

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="فروشگاه آنلاین">
+  <title>فروشگاه من</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="صفحه اصلی">
+      <img id="store-logo" class="store-logo" alt="" hidden>
+      <span id="store-name">فروشگاه من</span>
+    </a>
+    <p id="store-description" class="store-description"></p>
+    <button id="cart-toggle" class="cart-button" type="button">سبد خرید <span id="cart-count">۰</span></button>
+  </header>
+
+  <main>
+    <div id="hero-banner" class="hero-banner" hidden>
+      <img id="banner-image" alt="">
+    </div>
+    <section class="intro">
+      <p class="eyebrow" id="hero-eyebrow">فروشگاه آنلاین</p>
+      <h1 id="hero-title">به فروشگاه ما خوش آمدید</h1>
+      <p id="hero-description">محصولات فروشگاه را اینجا معرفی کنید.</p>
+    </section>
+
+    <section class="toolbar" aria-label="جستجو و دسته‌بندی">
+      <input id="search" type="search" placeholder="جستجوی محصول..." aria-label="جستجوی محصول">
+      <div id="categories" class="categories"></div>
+    </section>
+
+    <section id="products" class="products" aria-live="polite"></section>
+
+    <aside id="cart-panel" class="cart-panel" hidden>
+      <div class="cart-heading">
+        <h2>سبد خرید</h2>
+        <button id="cart-close" class="text-button" type="button">بستن</button>
+      </div>
+      <div id="cart-items"></div>
+      <div class="cart-footer">
+        <strong>جمع کل: <span id="cart-total">۰</span></strong>
+        <button id="checkout" class="primary-button" type="button">ثبت سفارش در تلگرام</button>
+        <p class="hint">با انتخاب این گزینه، متن سفارش در تلگرام باز می‌شود؛ ارسال نهایی را خودتان انجام می‌دهید.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer><span id="footer-store-name">فروشگاه من</span></footer>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
